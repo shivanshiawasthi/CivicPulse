@@ -32,7 +32,7 @@ const quickActions = [
     title: 'View Profile',
     description: 'Review your account details and saved preferences.',
     icon: '👤',
-    to: '/login',
+    to: '/profile',
   },
 ];
 

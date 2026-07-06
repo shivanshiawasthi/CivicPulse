@@ -1,0 +1,239 @@
+:root {
+  --primary: #0d6efd;
+  --primary-dark: #1753c7;
+  --surface: #ffffff;
+  --surface-soft: #f4f9ff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #dbeafe;
+  --info: #2563eb;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --important: #dc2626;
+}
+
+.notifications-page {
+  padding: 32px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.notifications-header h1 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.notifications-header p {
+  color: var(--muted);
+}
+
+.mark-all-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notifications-summary {
+  display: flex;
+  align-items: center;
+}
+
+.summary-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+.notification-card.unread {
+  border-color: #b8d8ff;
+}
+
+.notification-card.read {
+  opacity: 0.9;
+}
+
+.notification-main {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.notification-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  background: var(--surface-soft);
+}
+
+.notification-icon.info {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.notification-icon.success {
+  background: rgba(22, 163, 74, 0.12);
+}
+
+.notification-icon.warning {
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.notification-icon.important {
+  background: rgba(220, 38, 38, 0.12);
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.notification-title-row h3 {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.notification-content p {
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.notification-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.unread-dot {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-badge.info {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--info);
+}
+
+.status-badge.success {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--success);
+}
+
+.status-badge.warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--warning);
+}
+
+.status-badge.important {
+  background: rgba(220, 38, 38, 0.12);
+  color: var(--important);
+}
+
+.delete-btn {
+  border: 1px solid #ffd7d7;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #fff2f2;
+  color: #c2410c;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.empty-state {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+.empty-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.empty-state h2 {
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.empty-state p {
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .notifications-page {
+    padding: 22px 16px 36px;
+  }
+
+  .notifications-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
